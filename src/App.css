@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body,
+html {
+  font-family: "Inter var", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+[data-reach-combobox-input] {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  outline: none;
+  font-size: 1.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  border-color: inherit;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+[data-reach-combobox-input]:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 1px #3182ce;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+[data-reach-combobox-input]:hover {
+  border-color: #cbd5e0;
+}
+
+[data-reach-combobox-input]:disabled,
+[data-reach-combobox-input]:disabled:focus,
+[data-reach-combobox-input]:disabled:hover,
+[data-reach-combobox-input][aria-disabled="true"],
+[data-reach-combobox-input][aria-disabled="true"]:focus,
+[data-reach-combobox-input][aria-disabled="true"]:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+nav [data-reach-combobox] {
+  max-width: 350px;
+  width: 100%;
+}
+
+nav [data-reach-list] {
+  font-size-adjust: 0.6rem;
 }
