@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
-import Header from "./header";
+import Header from "./components/Header";
 import App from "./app";
 import { theme, ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { SkipNavLink } from "@reach/skip-nav";

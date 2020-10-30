@@ -1,27 +1,27 @@
 import React from "react";
 import { Router } from "@reach/router";
 import { Box } from "@chakra-ui/core";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
-import Home from "./home";
+import Home from "./pages/home";
 
-import Users from "./users";
-import UsersHome from "./users-home";
-import SearchUser from "./search-users";
-import CreateUsers from "./create-users";
-import EditUsers from "./edit-users";
+import Users from "./pages/users";
+import UsersHome from "./pages/users-home";
+import SearchUser from "./pages/search-users";
+import CreateUsers from "./pages/create-users";
+import EditUsers from "./pages/edit-users";
 
-import Schools from "./schools";
-import SchoolsHome from "./schools-home";
-import SearchSchools from "./search-schools";
-import CreateSchools from "./create-schools";
-import EditSchools from "./edit-schools";
+import Schools from "./pages/schools";
+import SchoolsHome from "./pages/schools-home";
+import SearchSchools from "./pages/search-schools";
+import CreateSchools from "./pages/create-schools";
+import EditSchools from "./pages/edit-schools";
 
-import Events from "./events";
-import EventsHome from "./events-home";
-import SearchEvents from "./search-events";
-import CreateEvents from "./create-events";
-import EditEvents from "./edit-events";
+import Events from "./pages/events";
+import EventsHome from "./pages/events-home";
+import SearchEvents from "./pages/search-events";
+import CreateEvents from "./pages/create-events";
+import EditEvents from "./pages/edit-events";
 
 const App = () => {
   return (

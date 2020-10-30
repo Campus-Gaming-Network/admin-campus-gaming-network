@@ -8,37 +8,37 @@ import {
   FormErrorMessage,
   Input
 } from "@chakra-ui/core";
-import Layout from "./Layout";
+import Layout from "../components/Layout";
 
-const SearchEvents = () => {
-  const [eventIdQuery, setEventIdQuery] = React.useState("");
+const SearchUsers = () => {
+  const [userIdQuery, setUserIdQuery] = React.useState("");
   const [errors, setErrors] = React.useState({});
 
   return (
     <Layout>
       <Box pb={8}>
-        <Heading>Search Events</Heading>
+        <Heading>Search Users</Heading>
       </Box>
       <Box as="form" maxW="2xl" bg="white" rounded="lg" borderWidth={1} p={8}>
         <FormControl isRequired mb={8}>
-          <FormLabel htmlFor="eventIdQuery" fontSize="lg" fontWeight="bold">
-            Event ID
+          <FormLabel htmlFor="userIdQuery" fontSize="lg" fontWeight="bold">
+            User ID
           </FormLabel>
           <Input
-            id="eventIdQuery"
-            name="eventIdQuery"
+            id="userIdQuery"
+            name="userIdQuery"
             type="text"
             placeholder="E.g. lD4qKGNGmnafq1SlhWlTj6JXK9I3"
-            onChange={e => setEventIdQuery(e.target.value)}
-            value={eventIdQuery}
+            onChange={e => setUserIdQuery(e.target.value)}
+            value={userIdQuery}
             size="lg"
           />
-          <FormErrorMessage>{errors.eventIdQuery}</FormErrorMessage>
+          <FormErrorMessage>{errors.userIdQuery}</FormErrorMessage>
         </FormControl>
-        <Button type="submit">Search Events</Button>
+        <Button type="submit">Search Users</Button>
       </Box>
     </Layout>
   );
 };
 
-export default SearchEvents;
+export default SearchUsers;

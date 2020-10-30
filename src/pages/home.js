@@ -1,40 +1,40 @@
 import React from "react";
 import { Flex, Stack } from "@chakra-ui/core";
-import Link from "./Link";
-import Card from "./Card";
-import Layout from "./Layout";
+import Link from "../components/Link";
+import Card from "../components/Card";
+import Layout from "../components/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPencilAlt,
-  faPlus,
-  faSearch
+  faCalendarAlt,
+  faSchool,
+  faUserAlt
 } from "@fortawesome/free-solid-svg-icons";
 
-const Users = () => {
+const Home = () => {
   return (
     <Layout>
       <Flex>
         <Card>
           <Stack h="100%" justify="center" align="center">
-            <FontAwesomeIcon icon={faSearch} />
-            <Link to="search" fontWeight="bold">
-              Search Users
+            <FontAwesomeIcon icon={faUserAlt} />
+            <Link to="users" fontWeight="bold" pt={2}>
+              Users
             </Link>
           </Stack>
         </Card>
         <Card>
           <Stack h="100%" justify="center" align="center">
-            <FontAwesomeIcon icon={faPlus} />
-            <Link to="create" fontWeight="bold">
-              Create User
+            <FontAwesomeIcon icon={faSchool} />
+            <Link to="schools" fontWeight="bold" pt={2}>
+              Schools
             </Link>
           </Stack>
         </Card>
         <Card>
           <Stack h="100%" justify="center" align="center">
-            <FontAwesomeIcon icon={faPencilAlt} />
-            <Link to="edit" fontWeight="bold">
-              Edit User
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            <Link to="events" fontWeight="bold" pt={2}>
+              Events
             </Link>
           </Stack>
         </Card>
@@ -43,4 +43,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Home;

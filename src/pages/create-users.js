@@ -15,7 +15,8 @@ import {
   FormErrorMessage,
   Box
 } from "@chakra-ui/core";
-import Layout from "./Layout";
+import Layout from "../components/Layout";
+import SchoolSearch from "../components/SchoolSearch";
 
 const STUDENT_STATUS_OPTIONS = [
   { value: "", label: "Select status" },
@@ -60,6 +61,64 @@ const CreateUsers = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [errors, setErrors] = React.useState({});
   const hasErrors = React.useMemo(() => !isEmpty(errors), [errors]);
+
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+
+  //   setIsSubmitting(true);
+
+  //   const { isValid, errors } = validateSignUp(formState);
+
+  //   setErrors(errors);
+
+  //   if (!isValid) {
+  //     setIsSubmitting(false);
+  //     window.scrollTo(0, 0);
+  //     return;
+  //   }
+
+  //   firebaseAuth
+  //     .createUserWithEmailAndPassword(formState.email, formState.password)
+  //     .then(({ user }) => {
+  //       firebaseFirestore
+  //         .collection(COLLECTIONS.USERS)
+  //         .doc(user.uid)
+  //         .set({
+  //           id: user.uid,
+  //           firstName: formState.firstName,
+  //           lastName: formState.lastName,
+  //           status: formState.status,
+  //           gravatar: createGravatarHash(formState.email),
+  //           school: {
+  //             ref: firebaseFirestore
+  //               .collection(COLLECTIONS.SCHOOLS)
+  //               .doc(formState.school),
+  //             id: formState.school
+  //           }
+  //         });
+  //       firebaseAuth.currentUser.sendEmailVerification().then(
+  //         () => {
+  //           toast({
+  //             title: "Verification email sent.",
+  //             description: `A verification email has been sent to ${formState.email}. Please check your inbox and follow the instructions in the email.`,
+  //             status: "success",
+  //             isClosable: true
+  //           });
+  //         },
+  //         error => {
+  //           console.error(error);
+  //         }
+  //       );
+  //       setIsSubmitting(false);
+  //       navigate("/");
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       setError(error.message);
+  //       setIsSubmitting(false);
+  //       window.scrollTo(0, 0);
+  //     });
+  // };
 
   return (
     <Layout>
@@ -183,7 +242,7 @@ const SchoolSection = React.memo(props => {
         <FormLabel htmlFor="school" fontSize="lg" fontWeight="bold">
           School
         </FormLabel>
-        {/* <SchoolSearch onSelect={props.onSchoolSelect} /> */}
+        <SchoolSearch onSelect={props.onSchoolSelect} />
         <FormErrorMessage>{props.errors.school}</FormErrorMessage>
       </FormControl>
       <FormControl isRequired isInvalid={props.errors.status}>

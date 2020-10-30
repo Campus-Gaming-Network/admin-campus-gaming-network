@@ -8,7 +8,7 @@ import {
   FormErrorMessage,
   Input
 } from "@chakra-ui/core";
-import Layout from "./Layout";
+import Layout from "../components/Layout";
 
 const SearchSchools = () => {
   const [schoolIdQuery, setSchoolIdQuery] = React.useState("");

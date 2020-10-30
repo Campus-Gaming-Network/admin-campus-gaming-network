@@ -1,8 +1,8 @@
 import React from "react";
 import { Flex } from "@chakra-ui/core";
-import Link from "./Link";
-import Card from "./Card";
-import Layout from "./Layout";
+import Link from "../components/Link";
+import Card from "../components/Card";
+import Layout from "../components/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPencilAlt,
