@@ -8,7 +8,7 @@ import {
   ComboboxList,
   ComboboxOption
 } from "@reach/combobox";
-import useDebounce from "../hooks/useDebounce";
+import { useDebounce } from "@campus-gaming-network/tools";
 import { firebase } from "../firebase";
 
 const SchoolSearch = props => {

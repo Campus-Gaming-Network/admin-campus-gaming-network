@@ -5,7 +5,7 @@ import "firebase/firestore";
 import "firebase/functions";
 import "firebase/storage";
 
-import { FIREBASE_CONFIG } from "../constants";
+import { FIREBASE_CONFIG } from "@campus-gaming-network/tools";
 
 export const _firebase = firebase;
 export const firebaseApp = firebase.initializeApp(FIREBASE_CONFIG);
