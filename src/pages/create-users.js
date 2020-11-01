@@ -15,6 +15,7 @@ import {
   FormErrorMessage,
   Box
 } from "@chakra-ui/core";
+
 import Layout from "../components/Layout";
 import SchoolSearch from "../components/SchoolSearch";
 

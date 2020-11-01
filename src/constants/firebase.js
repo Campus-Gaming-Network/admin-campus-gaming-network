@@ -17,3 +17,8 @@ export const COLLECTIONS = {
   EVENT_RESPONSES: "event-responses",
   GAME_QUERIES: "game-queries"
 };
+export const CALLABLES = {
+  SEARCH_GAMES: "searchGames",
+  SEARCH_SCHOOLS: "searchSchools",
+  SEARCH_USERS: "searchUsers"
+};
