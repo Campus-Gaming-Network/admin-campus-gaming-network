@@ -27,7 +27,6 @@ export const DROPZONE_STYLES = {
     borderColor: "#ff1744"
   }
 };
-
 export const JSON_VIEW_THEMES = [
   { value: "apathy", label: "apathy" },
   { value: "apathy:inverted", label: "apathy:inverted" },
@@ -67,3 +66,4 @@ export const JSON_VIEW_THEMES = [
   { value: "tube", label: "tube" },
   { value: "twilight", label: "twilight" }
 ];
+export const DEFAULT_JSON_VIEW_THEME = "rjv-default";

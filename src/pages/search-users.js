@@ -7,25 +7,17 @@ import {
   FormLabel,
   FormErrorMessage,
   Input,
-  Select
+  useToast
 } from "@chakra-ui/core";
-import ReactJson from "react-json-view";
-import isEmpty from "lodash.isempty";
 import Layout from "../components/Layout";
 import JSONView from "../components/JSONView";
 import { firebase } from "../firebase";
-import { JSON_VIEW_THEMES } from "../constants";
-
-const isValidEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const SearchUsers = () => {
+  const toast = useToast();
   const [userQuery, setUserQuery] = React.useState("");
   const [isSearching, setIsSearching] = React.useState(false);
-  const [errors, setErrors] = React.useState({});
-  const isEmailQuery = React.useMemo(
-    () => (userQuery && userQuery.trim() ? isValidEmail(userQuery) : false),
-    [userQuery]
-  );
+  const [errors] = React.useState({});
   const [user, setUser] = React.useState(null);
 
   const handleSubmit = async e => {
@@ -40,7 +32,21 @@ const SearchUsers = () => {
         const response = await searchUsers({ query });
         setUser(response.data);
         setIsSearching(false);
+        toast({
+          title: "User found.",
+          description: `User found matching ${query}`,
+          status: "success",
+          duration: 9000,
+          isClosable: true
+        });
       } catch (error) {
+        toast({
+          title: "An error occurred.",
+          description: "Unable to search users.",
+          status: "error",
+          duration: 9000,
+          isClosable: true
+        });
         setIsSearching(false);
       }
     }
